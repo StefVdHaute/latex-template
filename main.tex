@@ -1,0 +1,97 @@
+\documentclass[a4paper, 11pt]{article}
+
+%----------%
+% Packages %
+%----------%
+
+\usepackage[english]{babel} % language
+\usepackage[utf8]{inputenc} % encoding
+\usepackage{graphicx}       % images
+\usepackage{helvet}         % lettertype
+\usepackage{xcolor}         % colors
+\usepackage{titlesec}       % section title style
+\usepackage[a4paper,bottom=2cm, top=2cm, left=2cm, right=2cm]{geometry} % margins and title page
+\usepackage{datetime}       % Used for formatting current date in title
+\usepackage{parskip}
+
+%-----------------%
+% Custom packages %
+%-----------------%
+
+%--------%
+% Images %
+%--------%
+
+\graphicspath{{./images}}
+
+% choose your language
+\graphicspath{{./logo_en}}
+% \graphicspath{{./logo_nl}}
+
+%------------%
+% Lettertype %
+%------------%
+
+\renewcommand{\familydefault}{\sfdefault}
+
+%---------------%
+% UGhent colors %
+%---------------%
+
+\definecolor{main_color}{RGB}{30, 100, 200}
+
+%-------------%
+% Sectionfont %
+%-------------%
+
+% Underlining is hard to do because it seems everyone dislikes that
+\titleformat{\section}{\color{main_color}\Large\MakeUppercase}{\thesection}{1em}{}
+
+%---------------------%
+% Current date format %
+%---------------------%
+
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+%-----------%
+% Titlepage %
+%-----------%
+\input{frontpage}
+
+%------%
+% Meta %
+%------%
+\title{Template}
+\newcommand{\subTitle}{A simple template} % if you do not want a subtitle you can simply leave this empty and/or delete it from frontpage.tex
+\author{Stef Van den Haute\\
+        \hspace{2cm}Stijn Barrezeele}
+\date{\monthyeardate\today}
+
+
+%----------%
+% Document %
+%----------%
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\setlength\parindent{0pt} % remove paragraph indents
+
+\section{Introduction}
+\subsection{Sub introduction}
+
+This template was brought to you via the World Wide Web \cite{BernersLee1990InformationMA}.
+
+%------------%
+% References %
+%------------%
+\newpage
+
+\bibliographystyle{IEEEtran} % bibliography style, use a style that applies to your field
+\bibliography{references} % The name of your references file (in this case references.bib)
+
+\end{document}
