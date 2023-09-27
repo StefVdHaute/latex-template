@@ -1,20 +1,20 @@
 \makeatletter
 \renewcommand{\maketitle}{
-    \newgeometry{left=0cm,bottom=0cm,right=0cm,top=0cm}
+    \newgeometry{left=2cm,bottom=0cm,right=0cm,top=0cm}
     \begin{titlepage}
-	    \includegraphics[width=8cm]{ugent_fac.eps}\\
+	    \hspace{-2cm}\includegraphics[width=8cm]{ugent_fac.eps}\\
     	\vfill
-    	\begin{flushleft}
-    	    \hspace{2cm}\Huge{\color{main_color}\MakeUppercase\@title}\\
+        \begin{flushleft}
+    	    \Huge{\color{main_color}\MakeUppercase\@title}\\
     	    \vspace{0.5cm}
-    	    \hspace{2cm}\Large{\color{main_color}\MakeUppercase\subTitle}\\
+    	    \Large{\color{main_color}\MakeUppercase\subTitle}\\
     	    \vspace{1cm}
-    	    \hspace{2cm}\normalsize\@author\\
+    	    \normalsize\@author\\
     	    \vspace{1cm}
-    	    \hspace{2cm}\small\@date\\
+    	    \small\@date\\
 	    \end{flushleft}
     	\vfill
-    	\hspace{1cm}\includegraphics[width=5cm]{ugent.eps}
+    	\hspace{-1cm}\includegraphics[width=5cm]{ugent.eps}
     \end{titlepage}
     \restoregeometry
 }
